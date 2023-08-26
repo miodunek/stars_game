@@ -166,7 +166,7 @@ function changeVolume(volume) {
   audio.currentTime = 0; 
   wrongAudio.volume = volume;
   audio.volume = volume;
-  audio.play(); //odtworzenie dźwięku przy każdej zmianie, aby gracz wiedział, jak głośna będzie gra
+  audio.play();
 }
 //starts the game after pressing the PLAY button
 button.addEventListener('click', startGame);
