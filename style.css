@@ -1,0 +1,161 @@
+@import url(//db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft);
+@font-face {
+	font-family: "Pixel"; 
+	src: url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot");
+	src: url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.eot?#iefix") format("embedded-opentype"), 
+	url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff2") format("woff2"), 
+	url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.woff") format("woff"), 
+	url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.ttf") format("truetype"), 
+	url("//db.onlinewebfonts.com/t/6ab539c6fc2b21ff0b149b3d06d7f97c.svg#Minecraft") format("svg");
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	background-image: url("night_city.jpg");
+	background-size: cover;
+	color: rgb(255, 255, 209);
+	transition: background-image 1s ease;
+}
+
+body.win {
+	background-image: url('day_city.jpg');
+}
+
+#board {
+	position: relative;
+	width: 960px;
+	height: 720px;
+	margin-top: 60px;
+	background-image: url("night_sky.png");
+	background-size: cover;
+	border-radius: 48px;
+	border: 5px solid rgb(255, 255, 209);
+	transition: background-image 1s ease;
+}
+
+#board.win {
+	background-image: url('day_sky.jpg');
+}
+
+#grid {
+	border: 1px solid rgb(255, 255, 209);
+	width: 488px;
+	height: 242px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-top: 50px; 
+	margin-right: 120px;
+	background-color: rgba(0, 0, 0, 0.541);
+}
+
+#grid.win {
+	border: 1px solid rgb(255, 255, 209);
+}
+
+.square {
+	height: 120px;
+	width: 120px;
+	border: 1px solid rgb(255, 255, 209);
+}
+
+
+#scoreboard {
+	display: flex;
+	justify-content: right;
+	margin-right: 120px;
+	gap: 20px;
+	font-family: 'Pixel', monospace;
+	font-size: 11px;
+}
+
+.star {
+	background-image: url("star2.png");
+	background-size: contain;
+}
+
+#playButton {	
+	margin-left: 700px;
+	margin-top: 20px;
+	height: 80px;
+	width: 160px;
+	padding: 20px;
+	background-color: rgb(255, 255, 209);
+	color: rgba(0, 0, 0, 0.63);
+	border: 3px solid rgba(0, 0, 0, 0.63);
+	font-family: 'Pixel', monospace;
+	font-size: 20px;
+	cursor: pointer;
+	border-radius: 32px;
+	transition: background-color 0.3s ease;
+}
+
+#playButton.clicked {
+	background-color: rgba(0, 0, 0, 0.63);
+	color: rgb(255, 255, 209);
+	border: 3px solid rgb(255, 255, 209);
+}
+
+.incorrect {
+	animation: shake 0.3s linear;
+}
+  
+@keyframes shake {
+	0% { transform: translateX(0); }
+	20% { transform: translateX(-10px); }
+	40% { transform: translateX(10px); }
+	60% { transform: translateX(-10px); }
+	80% { transform: translateX(10px); }
+	100% { transform: translateX(0); }
+}
+
+#highScore {
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-family: 'Pixel', monospace;
+	font-size: 11px;
+	display: flex;
+	gap: 20px;
+}
+
+#text {
+	position: absolute;
+	top: 20px;
+	font-family: 'Pixel', monospace;
+	font-size: 16px;
+}
+
+#audio {
+	display: none;
+}
+
+#music {
+	display: none;
+}
+
+#sounds {
+	position: absolute;
+	bottom: 20px;
+	right: 40px;
+	font-family: 'Pixel', monospace;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+#musicIcon {
+	width: 50px;
+	height:50px;
+	background-image: url("music-on.png");
+	background-size: cover;
+	cursor: pointer;
+	transition: background-image 0.2s ease;
+
+}
+
+#musicIcon.music-off {
+	background-image: url("music-off.png");
+}

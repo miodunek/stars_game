@@ -1,0 +1,58 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Whac-a-star</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="//db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft" rel="stylesheet" type="text/css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <audio id="audio" src="star-sound.mp3"></audio>
+  <audio id="music" src="music.mp3"></audio>
+  <audio id="wrong" src="wrong-audio.mp3"></audio>
+
+  <div id="text">
+    Click on the moving stars to earn points.
+  </div>
+  <div id="board">
+    <div id="grid">
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+    </div>
+
+    <div id="scoreboard">
+      <h2>Your score:</h2>
+      <h2 id="points">0</h2>  
+      <h2>Time left:</h2>
+      <h2 id="time">60</h2>
+    </div>
+      <button id="playButton">PLAY</button>
+      <div id="highScore">
+        <h2>High score:</h2>
+        <h2 id="highScoreValue">0/50</h2>
+      </div>
+    </div>
+
+    <div id="sounds">
+      <div id="musicIcon" class="music-on"></div>
+      <div id="musicVolumeInput">
+        <label for="volume">Music volume:</label>
+        <input type="range" id="musicVolume" min="0" max="1" step="0.1" value="1" onchange="changeMusicVolume(this.value)">
+      </div>
+      <div id="volumeInput">
+        <label for="volume">Game sounds:</label>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1" onchange="changeVolume(this.value)">
+      </div>
+    </div>
+
+</body>
+</html>
