@@ -12,14 +12,14 @@
 body {
 	display: flex;
 	justify-content: center;
-	background-image: url("night_city.jpg");
+	background-image: url("assets/night_city.jpg");
 	background-size: cover;
 	color: rgb(255, 255, 209);
 	transition: background-image 1s ease;
 }
 
 body.win {
-	background-image: url('day_city.jpg');
+	background-image: url('assets/day_city.jpg');
 }
 
 #board {
@@ -27,7 +27,7 @@ body.win {
 	width: 960px;
 	height: 720px;
 	margin-top: 60px;
-	background-image: url("night_sky.png");
+	background-image: url("assets/night_sky.png");
 	background-size: cover;
 	border-radius: 48px;
 	border: 5px solid rgb(255, 255, 209);
@@ -35,7 +35,7 @@ body.win {
 }
 
 #board.win {
-	background-image: url('day_sky.jpg');
+	background-image: url('assets/day_sky.jpg');
 }
 
 #grid {
@@ -71,7 +71,7 @@ body.win {
 }
 
 .star {
-	background-image: url("star2.png");
+	background-image: url("assets/star2.png");
 	background-size: contain;
 }
 
